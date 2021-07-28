@@ -12,8 +12,9 @@ import com.vfislk.utils.DataProviderUtils;
 public class LoginTest extends WebDriverWrapper {
 	
 	
-	@Test(dataProviderClass = DataProviderUtils.class,dataProvider = "invalidCredentialData")
-	public void invalidCredentialTest(String username,String password,String language,String expectedValue) {
+	@Test(dataProviderClass = DataProviderUtils.class,dataProvider = "commonDataProvider")
+	public void addPatientTest(String username,String password,String language,String firstname,String lastname,String dob,String gender,String expectedAlertText,String expectedValue)
+	{
 		LoginPage login = new LoginPage(driver);
 		login.enterUsername(username);
 		login.enterPassword(password);

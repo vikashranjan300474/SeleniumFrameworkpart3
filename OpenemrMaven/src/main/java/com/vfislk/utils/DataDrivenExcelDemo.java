@@ -12,7 +12,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class DataDrivenExcelDemo {
 
 	public static void main(String[] args) throws IOException {
-		FileInputStream file=new FileInputStream("src/test/resources/Driver/OpenEMRData.xlsx");
+		FileInputStream file=new FileInputStream("src/test/resources/testdata/OpenEMRData.xlsx");
 		XSSFWorkbook book=new XSSFWorkbook(file);
 		
 		XSSFSheet sheet=book.getSheet("invalidCredentialTest");
