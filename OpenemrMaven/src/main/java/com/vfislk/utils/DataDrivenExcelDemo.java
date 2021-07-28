@@ -1,4 +1,4 @@
-package com.vfislk.com;
+package com.vfislk.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;
