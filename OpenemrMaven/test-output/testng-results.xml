@@ -1,51 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="35239" started-at="2021-07-27T04:57:54Z" finished-at="2021-07-27T04:58:29Z">
+  <suite name="Default suite" duration-ms="1226" started-at="2021-07-29T05:50:12Z" finished-at="2021-07-29T05:50:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="35239" started-at="2021-07-27T04:57:54Z" finished-at="2021-07-27T04:58:29Z">
-      <class name="com.vfislk.com.LoginTest">
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.vfislk.com.LoginTest@56235b8e]" name="setup" is-config="true" duration-ms="12896" started-at="2021-07-27T10:27:54Z" finished-at="2021-07-27T10:28:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ch]]>
-              </value>
-            </param>
-          </params>
+    <test name="Default test" duration-ms="1226" started-at="2021-07-29T05:50:12Z" finished-at="2021-07-29T05:50:13Z">
+      <class name="com.vfislk.openemrtest.DemoTest">
+        <test-method status="FAIL" signature="excelRead()[pri:0, instance:com.vfislk.openemrtest.DemoTest@31dc339b]" name="excelRead" duration-ms="1171" started-at="2021-07-29T11:20:12Z" finished-at="2021-07-29T11:20:13Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerExceptionat com.vfislk.openemrtest.DemoTest.excelRead(DemoTest.java:40)at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)at java.lang.reflect.Method.invoke(Unknown Source)at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)at org.testng.TestRunner.privateRun(TestRunner.java:648)at org.testng.TestRunner.run(TestRunner.java:505)at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)at org.testng.SuiteRunner.run(SuiteRunner.java:364)at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)at org.testng.TestNG.runSuites(TestNG.java:1028)at org.testng.TestNG.run(TestNG.java:996)at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="ValidCredentialTest()[pri:0, instance:com.vfislk.com.LoginTest@56235b8e]" name="ValidCredentialTest" duration-ms="6748" started-at="2021-07-27T10:28:07Z" finished-at="2021-07-27T10:28:14Z">
+        </test-method> <!-- excelRead -->
+        <test-method status="PASS" signature="readProperties()[pri:0, instance:com.vfislk.openemrtest.DemoTest@31dc339b]" name="readProperties" duration-ms="4" started-at="2021-07-29T11:20:13Z" finished-at="2021-07-29T11:20:13Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidCredentialTest -->
-        <test-method status="PASS" signature="tearup()[pri:0, instance:com.vfislk.com.LoginTest@56235b8e]" name="tearup" is-config="true" duration-ms="2232" started-at="2021-07-27T10:28:14Z" finished-at="2021-07-27T10:28:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearup -->
-        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:com.vfislk.com.LoginTest@56235b8e]" name="setup" is-config="true" duration-ms="10012" started-at="2021-07-27T10:28:16Z" finished-at="2021-07-27T10:28:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[ch]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="invalidCredentialTest()[pri:0, instance:com.vfislk.com.LoginTest@56235b8e]" name="invalidCredentialTest" duration-ms="1939" started-at="2021-07-27T10:28:26Z" finished-at="2021-07-27T10:28:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidCredentialTest -->
-        <test-method status="PASS" signature="tearup()[pri:0, instance:com.vfislk.com.LoginTest@56235b8e]" name="tearup" is-config="true" duration-ms="1332" started-at="2021-07-27T10:28:28Z" finished-at="2021-07-27T10:28:29Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearup -->
-      </class> <!-- com.vfislk.com.LoginTest -->
+        </test-method> <!-- readProperties -->
+      </class> <!-- com.vfislk.openemrtest.DemoTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.vfislk.com.LoginTest">
+      <class name="com.vfislk.openemrtest.DemoTest">
         <methods>
-          <include name="setup"/>
-          <include name="invalidCredentialTest"/>
-          <include name="tearup"/>
+          <include name="excelRead"/>
         </methods>
-      </class> <!-- com.vfislk.com.LoginTest -->
+      </class> <!-- com.vfislk.openemrtest.DemoTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
