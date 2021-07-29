@@ -1,7 +1,13 @@
 package com.vfislk.openemrbase;
 
+import java.io.File;
+import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -37,15 +43,24 @@ public class WebDriverWrapper {
 			driver=new ChromeDriver();
 			break;
 		}
+
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://demo.openemr.io/a/openemr/index.php");
 		
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		
-		driver.get("http://demo.openemr.io/b/openemr/interface/login/login.php?site=default");
-	}
-	@AfterMethod
-	public void tearup()
-	{
-		driver.quit();
 	}
 	
+	public void takeScreenshot() throws IOException
+	{
+		String fileName="screenshot_"+LocalDateTime.now().toString().replace(":", "-")+".png";
+		TakesScreenshot ts=(TakesScreenshot) driver;	
+		File file =ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file, new File("src/test/resources/screenshots/"+fileName));
+	}
+	
+	@AfterMethod
+	public void tearDown() throws IOException {
+	takeScreenshot();	
+	driver.quit();
+	}
 }

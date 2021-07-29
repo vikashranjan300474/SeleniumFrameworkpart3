@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class PatientFinderPage {
 
-	private By patFrameLocator=By.xpath("//iframe[contains(@src,'dynamic_finder')]");
+	private By finFrameLocator=By.xpath("//iframe[contains(@src,'dynamic_finder')]");
 	private By addnewPatientLocator=By.xpath("//button[normalize-space()='Add New Patient']");
 	
 	//VVI Provider WebDriver and WebDriver constructor in each Page class with this keyword to call current class
@@ -17,7 +17,7 @@ public class PatientFinderPage {
 	
 	public void addnewPatient()
 	{
-		driver.switchTo().frame(driver.findElement(patFrameLocator));	
+		driver.switchTo().frame(driver.findElement(finFrameLocator));	
 		driver.findElement(addnewPatientLocator).click();	
 		driver.switchTo().defaultContent();
 	}
